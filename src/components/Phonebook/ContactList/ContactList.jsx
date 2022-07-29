@@ -1,5 +1,4 @@
-// import PropTypes from "prop-types";
-// import styles from "./ContactList.module.css";
+import PropTypes from "prop-types";
 import ContactListItem from "../ContactListItem/ContactListItem";
 
 function ContactList({ list, onRemove }) {
@@ -12,8 +11,9 @@ function ContactList({ list, onRemove }) {
   );
 }
 
-// ContactList.propTypes = {
-//   onRemove: PropTypes.func.isRequired,
-// };
+ContactList.propTypes = {
+  list: PropTypes.arrayOf(PropTypes.object.isRequired),
+  onRemove: PropTypes.func.isRequired,
+};
 
 export default ContactList;
